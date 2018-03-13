@@ -1,0 +1,29 @@
+<nav id="global-nav" class="nav">	
+	<div class="container">	
+		<div class="brand"> 
+			<a href="#" class="site-title"> <i class="fa fa-asl-interpreting"></i>WnetServices </a>
+		</div>
+	<div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+	<ul class="nav-list " id="show-response" >
+		<li><a href="{% url 'home' %}"> HOME </a></li>
+		<li><a href="#"> ABOUT </a></li>
+		<li class= 'dropdown'><a href="{% url 'service' %}" class="drop-btn"> SERVICES </a>
+			<div class="dropdown-content">
+				<a href="#"> Web Design &amp; development </a>
+				<a href="#"> Ecommerce-Solution </a>
+				<a href="#"> Content Management System </a>
+				<a href="#"> Search Engine Optimaization </a>
+				<a href="#"> Mobile App Development </a>
+				<a href="#"> Logo &amp; Graphic Design </a>
+	    
+			</div>	
+
+		</li>
+		<li><a href="#"> WHY US ? </a></li>
+		<li><a href="{% url 'contact' %}"> CONTACT US </a></li>
+	</ul>
+  </div>
+   
+
+     
+</nav>

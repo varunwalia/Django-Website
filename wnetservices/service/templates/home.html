@@ -1,0 +1,291 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/swiper.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'css/carousel.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.6/css/swiper.min.css">
+ <link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/animate.css@3.5.2/animate.min.css">
+
+<style>
+
+#services {
+  margin-left: 30px;
+
+}
+
+@media only screen and (max-width: 600px){
+  #services{
+    margin-left: 15px;
+  }
+}
+  .service-container {
+  margin-top: 60px;
+  position: relative;
+  width: 300px;
+  overflow: hidden;
+}
+
+.service-container .image {
+  display: block;
+  width: 100%;
+  height: 300px;
+  -webkit-transform:scale(1);
+  transition: .3s ease;
+}
+
+ .service-container:hover .image{
+  transform: scale(1.5);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background-color:  rgba(0,0,0,.5);
+  overflow: hidden;
+  width: 100%;
+  height:18%;
+  transition: .6s ease;
+}
+
+.service-container:hover .overlay {
+ height: 100%;
+}
+
+.overlay .text {
+  white-space: nowrap; 
+  color: white;
+  text-align: center; 
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+
+.overlay .text h4{
+  font-size: 16px;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+
+#map{
+  height:300px;
+  width: 100%;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+
+<section id='slide-show'>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+
+      <!-- carousel code -->
+      <div id="carouselExampleIndicators" class="carousel slide">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner skyblue">
+
+          <!-- first slide -->
+          <div class="carousel-item active skyblue">
+            <div class="carousel-caption d-md-block">
+              <h3 data-animation="animated bounceInLeft">
+                This is the caption for slide 1
+              </h3>
+              <h3 data-animation="animated bounceInRight">
+                This is the caption for slide 1
+              </h3>
+              <button class="btn btn-primary btn-lg" data-animation="animated zoomInUp">Button</button>
+            </div>
+          </div>
+
+          <!-- second slide -->
+          <div class="carousel-item skyblue">
+            <div class="carousel-caption d-md-block">
+              <h3 class="icon-container" data-animation="animated bounceInDown">
+                <span class="fa fa-heart"></span>
+              </h3>
+              <h3 data-animation="animated bounceInUp">
+                This is the caption for slide 2
+              </h3>
+              <button class="btn btn-primary btn-lg" data-animation="animated zoomInRight">Button</button>
+            </div>
+          </div>
+
+          <!-- third slide -->
+          <div class="carousel-item skyblue">
+            <div class="carousel-caption d-md-block">
+              <h3 class="icon-container" data-animation="animated zoomInLeft">
+                <span class="fa fa-glass"></span>
+              </h3>
+              <h3 data-animation="animated flipInX">
+                This is the caption for slide 3
+              </h3>
+              <button class="btn btn-primary btn-lg" data-animation="animated lightSpeedIn">Button</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- controls -->
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+      </div>
+
+    </div>
+  </div>
+</div>
+</section>
+
+<section id='services'>
+  <div class="container">
+    <div class="row">
+    <div class="col-sm-4 ">
+        <div class="service-container">
+        <a href="#"> <img src="{% static 'images/web-design.jpg' %}" alt="Avatar" class="image">
+        <div class="overlay">
+        <div class="text"><h4>Web Design and Development</h4><p>   We excel in web-developmet...</p></div>
+        </div></a>
+        </div>
+    </div>
+        
+    <div class="col-sm-4 ">
+        <div class="service-container">
+        <a href="#"> <img src="{% static 'images/slide.jpg' %}" alt="Avatar" class="image">
+        <div class="overlay">
+        <div class="text">E-Commerce Solutions</div>
+        </div></a>
+        </div>
+    </div>
+
+    <div class="col-sm-4 ">
+        <div class="service-container">
+        <a href="#"> <img src="{% static 'images/content.jpg' %}" alt="Avatar" class="image">
+        <div class="overlay">
+        <div class="text">Content Management System</div>
+        </div></a>
+        </div>  
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4 ">
+        <div class="service-container">
+        <a href="#"> <img src="{% static 'images/seo.jpg' %}" alt="Avatar" class="image">
+        <div class="overlay">
+        <div class="text">Search Engine Optimization</div>
+        </div></a>
+        </div>
+    </div>
+    <div class="col-sm-4 ">
+        <div class="service-container">
+        <a href="#"> <img src="{% static 'images/app.jpg' %}" alt="Avatar" class="image">
+        <div class="overlay">
+        <div class="text">Mobile App Development</div>
+        </div></a>
+        </div>
+    </div>
+
+    <div class="col-sm-4 ">
+        <div class="service-container">
+        <a href="#"> <img src="{% static 'images/image4.jpg' %}" alt="Avatar" class="image">
+        <div class="overlay">
+        <div class="text">Logo&amp;Graphic Design</div>
+        </div></a>
+        </div>
+    </div>
+        
+  </div>
+
+  </div>
+</section>
+
+
+
+
+<div class="container">
+<h3>My Google Maps Demo</h3>
+    <div id="map"></div>
+ 
+
+</div>
+
+
+
+{% endblock %}
+
+
+
+
+
+
+
+{% block javascript %}
+   <script>
+      // function initMap() {
+      //   var uluru = {lat: 28.6509118, lng: 77.3560082};
+      //   var map = new google.maps.Map(document.getElementById('map'), {
+      //     zoom: 7,
+      //     center: uluru
+      //   });
+      //   var marker = new google.maps.Marker({
+      //     position: uluru,
+      //     map: map
+      //   });
+      // }
+ 
+
+  /* Demo Scripts for Bootstrap Carousel and Animate.css article
+* on SitePoint by Maria Antonietta Perna
+*/
+(function($) {
+  //Function to animate slider captions
+  function doAnimations(elems) {
+    //Cache the animationend event in a variable
+    var animEndEv = "webkitAnimationEnd animationend";
+
+    elems.each(function() {
+      var $this = $(this),
+        $animationType = $this.data("animation");
+      $this.addClass($animationType).one(animEndEv, function() {
+        $this.removeClass($animationType);
+      });
+    });
+  }
+
+  //Variables on page load
+  var $myCarousel = $("#carouselExampleIndicators"),
+    $firstAnimatingElems = $myCarousel
+      .find(".carousel-item:first")
+      .find("[data-animation ^= 'animated']");
+
+  //Initialize carousel
+  $myCarousel.carousel();
+
+  //Animate captions in first slide on page load
+  doAnimations($firstAnimatingElems);
+
+  //Other slides to be animated on carousel slide event
+  $myCarousel.on("slide.bs.carousel", function(e) {
+    var $animatingElems = $(e.relatedTarget).find(
+      "[data-animation ^= 'animated']"
+    );
+    doAnimations($animatingElems);
+  });
+})(jQuery);
+
+</script>
+{% endblock %}

@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<section id='heading'>
+
+	<h4>Home / Services</h4>
+
+
+
+</section>
+
+
+<section id='services'>
+  <div class="container">
+    <div class="row">
+    <div class="col-sm-4 ">
+        <div class="service-container">
+        <a href="#"> <img src="{% static 'images/web-design.jpg' %}" alt="Avatar" class="image">
+        <div class="overlay">
+        <div class="text"><h4>Web Design and Development</h4><p>   We excel in web-developmet...</p></div>
+        </div></a>
+        </div>
+    </div>
+        
+    <div class="col-sm-4 ">
+        <div class="service-container">
+        <a href="#"> <img src="{% static 'images/slide.jpg' %}" alt="Avatar" class="image">
+        <div class="overlay">
+        <div class="text">E-Commerce Solutions</div>
+        </div></a>
+        </div>
+    </div>
+
+    <div class="col-sm-4 ">
+        <div class="service-container">
+        <a href="#"> <img src="{% static 'images/content.jpg' %}" alt="Avatar" class="image">
+        <div class="overlay">
+        <div class="text">Content Management System</div>
+        </div></a>
+        </div>  
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4 ">
+        <div class="service-container">
+        <a href="#"> <img src="{% static 'images/seo.jpg' %}" alt="Avatar" class="image">
+        <div class="overlay">
+        <div class="text">Search Engine Optimization</div>
+        </div></a>
+        </div>
+    </div>
+    <div class="col-sm-4 ">
+        <div class="service-container">
+        <a href="#"> <img src="{% static 'images/app.jpg' %}" alt="Avatar" class="image">
+        <div class="overlay">
+        <div class="text">Mobile App Development</div>
+        </div></a>
+        </div>
+    </div>
+
+    <div class="col-sm-4 ">
+        <div class="service-container">
+        <a href="#"> <img src="{% static 'images/image4.jpg' %}" alt="Avatar" class="image">
+        <div class="overlay">
+        <div class="text">Logo&amp;Graphic Design</div>
+        </div></a>
+        </div>
+    </div>
+        
+  </div>
+
+  </div>
+</section>
+
+
+{% endblock %}
